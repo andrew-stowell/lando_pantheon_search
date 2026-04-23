@@ -1,0 +1,7 @@
+name: 'Lando Pantheon Search'
+type: module
+description: 'Makes search_api_pantheon work inside Lando by fixing the pantheon connector''s environment variable handling and URL construction.'
+core_version_requirement: ^10 || ^11
+package: Search
+dependencies:
+  - search_api_pantheon:search_api_pantheon

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations for the Lando Pantheon Search module.
+ */
+
+use Drupal\lando_pantheon_search\Plugin\SolrConnector\LandoPantheonSolrConnector;
+
+/**
+ * Implements hook_search_api_solr_connector_info_alter().
+ *
+ * Replaces the class backing the "pantheon" Solr connector so the connector
+ * builds URLs correctly when running under Lando (empty context, non-standard
+ * path, http scheme).
+ */
+function lando_pantheon_search_search_api_solr_connector_info_alter(array &$connectors) {
+  if (isset($connectors['pantheon'])) {
+    $connectors['pantheon']['class'] = LandoPantheonSolrConnector::class;
+  }
+}
