@@ -1,6 +1,6 @@
 # Lando Pantheon Search
 
-Makes the [`search_api_pantheon`](https://www.drupal.org/project/search_api_pantheon) connector work inside Lando. Safe to leave enabled in every environment — it's a no-op wherever the upstream module already connects correctly.
+Makes the [`search_api_pantheon`](https://www.drupal.org/project/search_api_pantheon) connector work inside Lando. Should only be enabled locally.
 
 ## Why this exists
 
